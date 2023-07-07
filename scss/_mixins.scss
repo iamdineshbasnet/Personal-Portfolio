@@ -1,0 +1,81 @@
+@mixin flex($align-items, $justify-content, $flex-direction, $gap) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+	gap: $gap;
+}
+
+@mixin position(
+	$position,
+	$top,
+	$bottom,
+	$left,
+	$right,
+	$translateX,
+	$translateY
+) {
+	position: $position;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+	transform: translate($translateX, $translateY);
+}
+
+// for desktop
+@mixin lg(){
+	@media (min-width: 1148px) {
+		@content;
+	}
+}
+@mixin md(){
+	@media (max-width: 1148px) {
+		@content;
+	}
+}
+@mixin sm(){
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin xs(){
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+@mixin xxs(){
+	@media (max-width: 360px) {
+		@content;
+	}
+}
+
+@mixin hide($flex-direction) {
+	display: none;
+	&.active {
+		display: flex;
+		flex-direction: $flex-direction;
+	}
+}
+
+@mixin pageTitle() {
+	display: block;
+	margin-bottom: 3rem;
+	width: 100%;
+	&.sm {
+		margin: 2rem 0;
+		h4 {
+			font-size: 2rem;
+		}
+	}
+	h4 {
+		color: #eee;
+		font-family: 'Poppins', Helvetica, sans-serif;
+		font-size: 3rem;
+		font-weight: 600;
+		text-transform: capitalize;
+		.highlights {
+			color: $primary-color;
+		}
+	}
+}
