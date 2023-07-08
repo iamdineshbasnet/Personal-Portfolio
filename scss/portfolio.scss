@@ -1,0 +1,136 @@
+@import './mixins';
+@import './variables';
+
+#portfolio {
+	padding: 6rem;
+	height: 100vh;
+	overflow: scroll;
+	@include xs {
+		padding: 3rem;
+	}
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&.content {
+		@include hide(column);
+	}
+	.page-title {
+		@include pageTitle();
+	}
+
+	.portfolio-tab-list {
+		ul {
+			@include flex(center, flex-start, row, 2rem);
+			.portfolio-tab-item {
+				a {
+					font-family: Poppins, Arial, Helvetica, sans-serif;
+					font-size: 1.4rem;
+					font-weight: 400;
+					color: #aaa;
+					cursor: pointer;
+					transition: color 0.3s;
+					text-transform: capitalize;
+					&:hover {
+						color: $primary-color;
+					}
+					&.active {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+
+	.portfolio-content {
+		margin-top: 2rem;
+		.card-wrapper {
+			display: grid;
+			gap: 2rem;
+			grid-template-columns: repeat(3, 1fr);
+			@include sm {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@include xs {
+				grid-template-columns: repeat(1, 1fr);
+			}
+
+			.card {
+				.portfolio-image-wrapper {
+					position: relative;
+					aspect-ratio: 5/3;
+					overflow: hidden;
+                    transition: all .3s;
+                    cursor: pointer;
+					&:hover {
+                        .portfolio-action {
+                            .portfolio-button {
+								opacity: 1;
+								pointer-events: all;
+							}
+						}
+					}
+					&::before {
+                        content: '';
+						background: rgba($color: #000000, $alpha: .2);
+						width: 100%;
+						height: 100%;
+						@include position(absolute, null, -100%, 0%, 0, null, null);
+                        transition: all .3s;
+					}
+                    &:hover{
+                        &::before{
+                            bottom: 0;
+
+                        }
+                    }
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						
+					}
+					.portfolio-action {
+						@include position(
+							absolute,
+							null,
+							0.5rem,
+							0.1rem,
+							null,
+							null,
+							null
+						);
+						@include flex(center, flex-start, row, 1rem);
+						padding: 0 1rem;
+						.portfolio-button {
+							font-size: 1.4rem;
+							cursor: pointer;
+							color: #bbb;
+							background: #101010;
+							padding: 0 1rem;
+							text-transform: capitalize;
+							text-decoration: none;
+							transition: all 0.3s;
+							pointer-events: none;
+							opacity: 0;
+							&:hover {
+								color: $primary-color;
+							}
+							@include md {
+								opacity: 1;
+								pointer-events: all;
+							}
+						}
+					}
+				}
+				.portfolio-title {
+					color: #d5d5d5;
+					font-family: Poppins, Arial, Helvetica, sans-serif;
+					text-transform: capitalize;
+					font-size: 1.6rem;
+					font-weight: 500;
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+}

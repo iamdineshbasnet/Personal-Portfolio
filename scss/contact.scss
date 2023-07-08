@@ -1,0 +1,235 @@
+@import './mixins';
+@import './variables';
+
+#contact {
+	padding: 6rem;
+	height: 100vh;
+	overflow: scroll;
+	@include xs {
+        padding: 3rem;
+    }
+	&::-webkit-scrollbar{
+		display: none;
+	}
+	&.content {
+		@include hide(column);
+	}
+	.page-title {
+		@include pageTitle();
+	}
+
+	.contact-content {
+		@include flex(flex-start, flex-start, row, 4rem);
+		@include sm{
+			flex-direction: column;
+		}
+		.left {
+			@include sm{
+				width: 100%;
+			}
+			.contact-card {
+				border: 0.1rem solid #444;
+				text-align: center;
+				padding: 2rem;
+				background: #333;
+				max-width: 30rem;
+				@include sm{
+					width: 100%;
+					max-width: 100%;
+				}
+				&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
+				.contact-icon {
+					font-size: 3rem;
+					color: $primary-color;
+				}
+
+				.contact-text {
+					color: #eee;
+					font-size: 1.4rem;
+					font-family: Poppins, Arial, Helvetica, sans-serif;
+					font-weight: 500;
+					text-decoration: none;
+				}
+			}
+		}
+		.right {
+			width: 100%;
+			.contact-form {
+				form {
+					.input-group {
+						@include flex(flex-start, space-between, row, 2rem);
+						@include xxs{
+							flex-direction: column;
+							margin-top: 3rem;
+						}
+						.input-group-wrapper {
+							width: 100%;
+
+							.input-group {
+								@include flex(
+									flex-start,
+									flex-start,
+									column,
+									0.5rem
+								);
+								position: relative;
+								&:not(:last-child) {
+									margin-bottom: 4rem;
+								}
+								label {
+									font-size: 1.4rem;
+									color: #a5a6a7;
+									text-transform: capitalize;
+									font-family: Poppins, Arial, Helvetica,
+										sans-serif;
+									cursor: pointer;
+
+									@include position(
+										absolute,
+										50%,
+										null,
+										1rem,
+										null,
+										0,
+										-50%
+									);
+									transition: all 0.3s;
+									&.message-label {
+										@include position(
+											absolute,
+											2rem,
+											null,
+											1rem,
+											null,
+											null,
+											null
+										);
+									}
+								}
+								input,
+								textarea {
+									&:focus ~ label {
+										color: $primary-color;
+										@include position(
+											absolute,
+											0%,
+											null,
+											0rem,
+											null,
+											0,
+											-100%
+										);
+									}
+									&:valid ~ label {
+										color: $primary-color;
+										@include position(
+											absolute,
+											0%,
+											null,
+											0rem,
+											null,
+											0,
+											-100%
+										);
+									}
+								}
+								input,
+								textarea {
+									resize: none;
+									width: 100%;
+									background: transparent;
+									border: 0.2rem solid #a5a6a7;
+									border-radius: 0.4rem;
+									padding: 0 1rem;
+									color: #a5a6a7;
+									font-family: Poppins, Arial, Helvetica,
+										sans-serif;
+									font-size: 1.4rem;
+									&:focus {
+										border: 0.2rem solid $primary-color;
+										outline: none;
+									}
+								}
+								input {
+									height: 4rem;
+								}
+								.error-message {
+									display: none;
+									@include position(
+										absolute,
+										null,
+										-0.5rem,
+										1rem,
+										null,
+										0,
+										100%
+									);
+									background: #ff4e4e;
+									padding: 0.3rem 1rem;
+									border-radius: 0.2rem;
+									&::before {
+										content: '';
+										@include position(
+											absolute,
+											0,
+											null,
+											1rem,
+											null,
+											0,
+											-50%
+										);
+										border-top: 1.5rem solid transparent;
+										border-bottom: 1.5rem solid transparent;
+										border-right: 1.5rem solid #ff4e4e;
+										z-index: -1;
+									}
+									p {
+										color: #fff;
+										font-family: Poppins, Arial, Helvetica,
+											sans-serif;
+										font-size: 1.3rem;
+										font-weight: 400;
+									}
+								}
+							}
+						}
+					}
+
+					.button-group {
+						margin-top: 4rem;
+						button {
+							background: transparent;
+							border: 0.2rem solid $primary-color;
+							outline: none;
+							padding: 1rem 2rem;
+							border-radius: 10rem;
+							transition: all 0.3s;
+							cursor: pointer;
+							&:hover {
+								background: $primary-color;
+								a {
+									color: #fff;
+								}
+							}
+							&:focus {
+								outline: none;
+							}
+							a {
+								text-decoration: none;
+								color: #a5a6a7;
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								text-transform: capitalize;
+								font-weight: 500;
+								font-size: 1.6rem;
+								transition: all 0.3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

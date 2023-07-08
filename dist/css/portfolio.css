@@ -1,0 +1,154 @@
+#portfolio {
+  padding: 6rem;
+  height: 100vh;
+  overflow: scroll;
+}
+@media (max-width: 500px) {
+  #portfolio {
+    padding: 3rem;
+  }
+}
+#portfolio::-webkit-scrollbar {
+  display: none;
+}
+#portfolio.content {
+  display: none;
+}
+#portfolio.content.active {
+  display: flex;
+  flex-direction: column;
+}
+#portfolio .page-title {
+  display: block;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+#portfolio .page-title.sm {
+  margin: 2rem 0;
+}
+#portfolio .page-title.sm h4 {
+  font-size: 2rem;
+}
+#portfolio .page-title h4 {
+  color: #eee;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#portfolio .page-title h4 .highlights {
+  color: #04B4E0;
+}
+#portfolio .portfolio-tab-list ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+#portfolio .portfolio-tab-list ul .portfolio-tab-item a {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-transform: capitalize;
+}
+#portfolio .portfolio-tab-list ul .portfolio-tab-item a:hover {
+  color: #04B4E0;
+}
+#portfolio .portfolio-tab-list ul .portfolio-tab-item a.active {
+  color: #04B4E0;
+}
+#portfolio .portfolio-content {
+  margin-top: 2rem;
+}
+#portfolio .portfolio-content .card-wrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+  #portfolio .portfolio-content .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  #portfolio .portfolio-content .card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper {
+  position: relative;
+  aspect-ratio: 5/3;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper:hover .portfolio-action .portfolio-button {
+  opacity: 1;
+  pointer-events: all;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0%;
+  right: 0;
+  transform: translate(, );
+  transition: all 0.3s;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper:hover::before {
+  bottom: 0;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper .portfolio-action {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.1rem;
+  transform: translate(, );
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper .portfolio-action .portfolio-button {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #bbb;
+  background: #101010;
+  padding: 0 1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s;
+  pointer-events: none;
+  opacity: 0;
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper .portfolio-action .portfolio-button:hover {
+  color: #04B4E0;
+}
+@media (max-width: 1148px) {
+  #portfolio .portfolio-content .card-wrapper .card .portfolio-image-wrapper .portfolio-action .portfolio-button {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+#portfolio .portfolio-content .card-wrapper .card .portfolio-title {
+  color: #d5d5d5;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}/*# sourceMappingURL=portfolio.css.map */

@@ -1,0 +1,226 @@
+#contact {
+  padding: 6rem;
+  height: 100vh;
+  overflow: scroll;
+}
+@media (max-width: 500px) {
+  #contact {
+    padding: 3rem;
+  }
+}
+#contact::-webkit-scrollbar {
+  display: none;
+}
+#contact.content {
+  display: none;
+}
+#contact.content.active {
+  display: flex;
+  flex-direction: column;
+}
+#contact .page-title {
+  display: block;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+#contact .page-title.sm {
+  margin: 2rem 0;
+}
+#contact .page-title.sm h4 {
+  font-size: 2rem;
+}
+#contact .page-title h4 {
+  color: #eee;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#contact .page-title h4 .highlights {
+  color: #04B4E0;
+}
+#contact .contact-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  #contact .contact-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  #contact .contact-content .left {
+    width: 100%;
+  }
+}
+#contact .contact-content .left .contact-card {
+  border: 0.1rem solid #444;
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  max-width: 30rem;
+}
+@media (max-width: 768px) {
+  #contact .contact-content .left .contact-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#contact .contact-content .left .contact-card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+#contact .contact-content .left .contact-card .contact-icon {
+  font-size: 3rem;
+  color: #04B4E0;
+}
+#contact .contact-content .left .contact-card .contact-text {
+  color: #eee;
+  font-size: 1.4rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+#contact .contact-content .right {
+  width: 100%;
+}
+#contact .contact-content .right .contact-form form .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+}
+@media (max-width: 360px) {
+  #contact .contact-content .right .contact-form form .input-group {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper {
+  width: 100%;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group:not(:last-child) {
+  margin-bottom: 4rem;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group label {
+  font-size: 1.4rem;
+  color: #a5a6a7;
+  text-transform: capitalize;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group label.message-label {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  transform: translate(, );
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:focus ~ label,
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:focus ~ label {
+  color: #04B4E0;
+  position: absolute;
+  top: 0%;
+  left: 0rem;
+  transform: translate(0, -100%);
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:valid ~ label,
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:valid ~ label {
+  color: #04B4E0;
+  position: absolute;
+  top: 0%;
+  left: 0rem;
+  transform: translate(0, -100%);
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input,
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea {
+  resize: none;
+  width: 100%;
+  background: transparent;
+  border: 0.2rem solid #a5a6a7;
+  border-radius: 0.4rem;
+  padding: 0 1rem;
+  color: #a5a6a7;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:focus,
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:focus {
+  border: 0.2rem solid #04B4E0;
+  outline: none;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input {
+  height: 4rem;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message {
+  display: none;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 1rem;
+  transform: translate(0, 100%);
+  background: #ff4e4e;
+  padding: 0.3rem 1rem;
+  border-radius: 0.2rem;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translate(0, -50%);
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-right: 1.5rem solid #ff4e4e;
+  z-index: -1;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message p {
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+#contact .contact-content .right .contact-form form .button-group {
+  margin-top: 4rem;
+}
+#contact .contact-content .right .contact-form form .button-group button {
+  background: transparent;
+  border: 0.2rem solid #04B4E0;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#contact .contact-content .right .contact-form form .button-group button:hover {
+  background: #04B4E0;
+}
+#contact .contact-content .right .contact-form form .button-group button:hover a {
+  color: #fff;
+}
+#contact .contact-content .right .contact-form form .button-group button:focus {
+  outline: none;
+}
+#contact .contact-content .right .contact-form form .button-group button a {
+  text-decoration: none;
+  color: #a5a6a7;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}/*# sourceMappingURL=contact.css.map */

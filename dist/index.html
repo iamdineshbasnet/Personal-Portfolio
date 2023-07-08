@@ -8,6 +8,9 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/contact.css" />
+		<link rel="stylesheet" href="./css/about.css" />
+		<link rel="stylesheet" href="./css/portfolio.css" />
 	</head>
 	<body>
 		<div id="page">
@@ -272,7 +275,6 @@
 										</div>
 									</div>
 								</div>
-								
 							</div>
 						</div>
 					</section>
@@ -283,6 +285,14 @@
 						<div class="page-title">
 							<h4>portfolio</h4>
 						</div>
+
+						<div class="portfolio-tab-list">
+							<ul></ul>
+						</div>
+
+						<div class="portfolio-content">
+							<div class="card-wrapper"></div>
+						</div>
 					</section>
 					<!-- end of portfolio page -->
 
@@ -290,6 +300,100 @@
 					<section id="contact" class="content">
 						<div class="page-title">
 							<h4>contact</h4>
+						</div>
+
+						<div class="contact-content">
+							<div class="left">
+								
+							</div>
+							<div class="right">
+								<div class="page-title sm">
+									<h4>
+										How can I
+										<span class="highlights"
+											>help you?</span
+										>
+									</h4>
+								</div>
+
+								<div class="contact-form">
+									<form action="#">
+										<div class="input-group">
+											<div class="input-group-wrapper">
+												<div class="input-group">
+													<input
+														type="text"
+														id="fullName"
+														name="fullName"
+														required />
+													<label for="fullName"
+														>full name</label
+													>
+													<div class="error-message">
+														<p>Name is required.</p>
+													</div>
+												</div>
+												<div class="input-group">
+													<input
+														type="text"
+														id="email"
+														name="email"
+														required />
+													<label for="email"
+														>email address</label
+													>
+													<div class="error-message">
+														<p>
+															Email is required.
+														</p>
+													</div>
+												</div>
+												<div class="input-group">
+													<input
+														type="text"
+														id="subject"
+														name="subject"
+														required />
+													<label for="subject"
+														>subject</label
+													>
+													<div class="error-message">
+														<p>
+															Subject is required.
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="input-group-wrapper">
+												<div class="input-group">
+													<textarea
+														name="message"
+														id="message"
+														required
+														rows="9"></textarea>
+													<label
+														for="message"
+														class="message-label"
+														>message</label
+													>
+													<div class="error-message">
+														<p>
+															Message is required.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="button-group">
+											<button type="submit">
+												<a>send message</a>
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
 						</div>
 					</section>
 					<!-- end of contact page -->
@@ -301,7 +405,9 @@
 	</body>
 
 	<script src="./../js/code.jquery.com_jquery-3.7.0.min.js"></script>
-	<script src="./../js/script.js"></script>
+	<script type="module" src="./../js/script.js"></script>
+	<script type="module" src="./../js/portfolio.js"></script>
+	<script type="module" src="./../js/contact.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
 	<script
 		type="module"
