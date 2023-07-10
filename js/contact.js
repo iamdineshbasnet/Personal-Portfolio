@@ -54,4 +54,67 @@ $(document).ready(function () {
 
 		$('#contact .contact-content .left').append(contact_card);
 	});
+
+	// validation
+	$('#fullName').on('input', handleFullName);
+	$('#email').on('input', handleEmail);
+	$('#subject').on('input', handleSubject);
+	$('#message').on('input', handleMessage);
+	
+	//   handle full name
+	function handleFullName(e) {
+		var errorMessage = $('.name-error')
+		if (e.target.value.trim().length < 1) {
+		  errorMessage.addClass('active');
+		} else if(!isValidFullName(e.target.value)){
+			errorMessage.text('Enter a valid name.').addClass('active')
+
+		} else {
+		  errorMessage.removeClass('active');
+		}
+	  }
+
+	  function isValidFullName(fullName) {
+		var fullNameRegex = /^[a-zA-Z\s'-]+$/;
+		return fullNameRegex.test(fullName);
+	  }
+	  
+	  // handle Email
+	  function handleEmail() {
+		var emailInput = $(this);
+		var emailValue = emailInput.val().trim();
+		var errorMessage = $('.email-error')
+	  
+		if (emailValue === '') {
+		  errorMessage.text('Email is required.').addClass('active');
+		} else if (!isValidEmail(emailValue)) {
+		  errorMessage.text('Enter a valid email.').addClass('active');
+		} else {
+		  errorMessage.removeClass('active');
+		}
+	  }
+	  
+	  function isValidEmail(email) {
+		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	  }
+	  
+	//   handle subject
+	function handleSubject(e){
+		var errorMessage = $('.subject-error')
+		if (e.target.value.trim().length < 1) {
+		  errorMessage.addClass('active');
+		} else {
+		  errorMessage.removeClass('active');
+		}
+	}
+	//   handle message
+	function handleMessage(e){
+		var errorMessage = $('.message-error')
+		if (e.target.value.trim().length < 1) {
+		  errorMessage.addClass('active');
+		} else {
+		  errorMessage.removeClass('active');
+		}
+	}	
 });

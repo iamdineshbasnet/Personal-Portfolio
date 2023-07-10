@@ -176,6 +176,13 @@
   background: #ff4e4e;
   padding: 0.3rem 1rem;
   border-radius: 0.2rem;
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message.active {
+  display: block;
 }
 #contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message::before {
   content: "";
@@ -187,12 +194,6 @@
   border-bottom: 1.5rem solid transparent;
   border-right: 1.5rem solid #ff4e4e;
   z-index: -1;
-}
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message p {
-  color: #fff;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
 }
 #contact .contact-content .right .contact-form form .button-group {
   margin-top: 4rem;

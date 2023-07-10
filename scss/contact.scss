@@ -6,9 +6,9 @@
 	height: 100vh;
 	overflow: scroll;
 	@include xs {
-        padding: 3rem;
-    }
-	&::-webkit-scrollbar{
+		padding: 3rem;
+	}
+	&::-webkit-scrollbar {
 		display: none;
 	}
 	&.content {
@@ -20,11 +20,11 @@
 
 	.contact-content {
 		@include flex(flex-start, flex-start, row, 4rem);
-		@include sm{
+		@include sm {
 			flex-direction: column;
 		}
 		.left {
-			@include sm{
+			@include sm {
 				width: 100%;
 			}
 			.contact-card {
@@ -33,7 +33,7 @@
 				padding: 2rem;
 				background: #333;
 				max-width: 30rem;
-				@include sm{
+				@include sm {
 					width: 100%;
 					max-width: 100%;
 				}
@@ -60,7 +60,7 @@
 				form {
 					.input-group {
 						@include flex(flex-start, space-between, row, 2rem);
-						@include xxs{
+						@include xxs {
 							flex-direction: column;
 							margin-top: 3rem;
 						}
@@ -156,7 +156,11 @@
 									height: 4rem;
 								}
 								.error-message {
+									// display: none;
 									display: none;
+									&.active {
+										display: block;
+									}
 									@include position(
 										absolute,
 										null,
@@ -185,13 +189,11 @@
 										border-right: 1.5rem solid #ff4e4e;
 										z-index: -1;
 									}
-									p {
-										color: #fff;
-										font-family: Poppins, Arial, Helvetica,
-											sans-serif;
-										font-size: 1.3rem;
-										font-weight: 400;
-									}
+									color: #fff;
+									font-family: Poppins, Arial, Helvetica,
+										sans-serif;
+									font-size: 1.3rem;
+									font-weight: 400;
 								}
 							}
 						}

@@ -1,38 +1,27 @@
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
+
+const text = ['Frontend Developer', 'Web Developer']
+
 $(document).ready(function () {
 
-	//   homepage animation
-	const animation = { duration: 5000, easing: (t) => t };
-	const animationDelay = 5000;
+	text.forEach((txt)=>{
+		const swiper_slide = $(`<h4 class="swiper-slide"></h4>`).text(txt)
 
-	const slider = new KeenSlider('#type-animation', {
+		$('.home-swiper .swiper-wrapper').append(swiper_slide)
+
+	})
+
+	const swiper = new Swiper('.subtitle .home-swiper', {
 		loop: true,
-		spacing: 0,
-		defaultAnimation: {
-			duration: 50000,
+		autoplay: {
+			delay: 5000,
 		},
-		rubberband: true,
-		detailsChanged: (s) => {
-			s.slides.forEach((element, idx) => {
-				element.style.opacity = s.track.details.slides[idx].portion;
-			});
+		speed: 2000,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
 		},
-		renderMode: 'custom',
-		created(s) {
-			setTimeout(() => {
-				s.moveToIdx(2, true, animation);
-			}, animationDelay);
-		},
-		updated(s) {
-			setTimeout(() => {
-				s.moveToIdx(s.track.details.abs + 2, true, animation);
-			}, animationDelay);
-		},
-		animationEnded(s) {
-			setTimeout(() => {
-				s.moveToIdx(s.track.details.abs + 2, true, animation);
-			}, animationDelay);
-		},
+		grabCursor: true,
+		disableOnInteraction: false,
 	});
-
-	
 });

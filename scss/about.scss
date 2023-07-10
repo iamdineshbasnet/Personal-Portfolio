@@ -19,9 +19,7 @@
 	}
 
 	.section-content {
-		@include md{
-			margin-bottom: 2rem;
-		}
+		margin-bottom: 4rem;
 		.row {
 			@include flex(flex-start, flex-start, row, 3rem);
 
@@ -85,6 +83,7 @@
 	}
 
 	.info-block-wrapper {
+		margin-top: 1rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
@@ -145,7 +144,7 @@
 		}
 		.testimonial-swiper {
 			@include lg{
-				max-width: 100rem;
+				max-width: 85rem;
 			}
 			
 			.swiper{
@@ -160,7 +159,7 @@
 						position: relative;
 						padding: 3rem 2rem 1rem;
 						width: 100%;
-						max-width: 70rem !important;
+						max-width: 80rem !important;
 
 						
 						.testimonial-image-wrapper {

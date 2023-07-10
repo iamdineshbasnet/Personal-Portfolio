@@ -39,10 +39,8 @@
 #about-me .page-title h4 .highlights {
   color: #04B4E0;
 }
-@media (max-width: 1148px) {
-  #about-me .section-content {
-    margin-bottom: 2rem;
-  }
+#about-me .section-content {
+  margin-bottom: 4rem;
 }
 #about-me .section-content .row {
   display: flex;
@@ -124,6 +122,7 @@
   text-transform: lowercase;
 }
 #about-me .info-block-wrapper {
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -186,7 +185,7 @@
 }
 @media (min-width: 1148px) {
   #about-me .testimonial .testimonial-swiper {
-    max-width: 100rem;
+    max-width: 85rem;
   }
 }
 #about-me .testimonial .testimonial-swiper .swiper {
@@ -203,7 +202,7 @@
   position: relative;
   padding: 3rem 2rem 1rem;
   width: 100%;
-  max-width: 70rem !important;
+  max-width: 80rem !important;
 }
 #about-me .testimonial .testimonial-swiper .swiper .swiper-wrapper .swiper-slide .testimonial-image-wrapper {
   position: absolute;

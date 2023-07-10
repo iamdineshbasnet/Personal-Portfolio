@@ -3,10 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css" />
+		<title>iamdineshbasnet</title>
+
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/contact.css" />
 		<link rel="stylesheet" href="./css/about.css" />
@@ -52,17 +50,17 @@
 					<div class="social-links">
 						<ul>
 							<li>
-								<a href="#" target="_blank">
+								<a href="https://www.linkedin.com/in/iamdineshbasnet/" target="_blank">
 									<ion-icon name="logo-linkedin"></ion-icon
 								></a>
 							</li>
 							<li>
-								<a href="#" target="_blank">
+								<a href="https://github.com/iamdineshbasnet/" target="_blank">
 									<ion-icon name="logo-github"></ion-icon>
 								</a>
 							</li>
 							<li>
-								<a href="#" target="_blank">
+								<a href="https://codepen.io/iamdineshbasnet/" target="_blank">
 									<ion-icon name="logo-codepen"></ion-icon>
 								</a>
 							</li>
@@ -70,7 +68,7 @@
 					</div>
 
 					<div class="header-button">
-						<a href="#">Download CV</a>
+						<a href="../assets/iamdineshbasnet.pdf" download>Download CV</a>
 					</div>
 
 					<div class="copyright">
@@ -85,12 +83,9 @@
 							<h2>Dinesh Basnet</h2>
 						</div>
 
-						<div id="type-animation" class="keen-slider">
-							<div class="fader__slide keen-slider__slide">
-								<h4>Frontend Developer</h4>
-							</div>
-							<div class="fader__slide keen-slider__slide">
-								<h4>Web Developer</h4>
+						<div class="subtitle">
+							<div class="home-swiper">
+								<div class="swiper-wrapper"></div>
 							</div>
 						</div>
 					</section>
@@ -121,7 +116,8 @@
 						<div class="info-block-wrapper"></div>
 
 						<div class="testimonial">
-							<div class="page-title sm testimonial-controller-wrapper">
+							<div
+								class="page-title sm testimonial-controller-wrapper">
 								<h4>testimonial</h4>
 
 								<div class="swiper-controller">
@@ -134,9 +130,7 @@
 							<!-- Slider main container -->
 							<div class="testimonial-swiper">
 								<div class="swiper">
-									<div class="swiper-wrapper">
-									</div>
-
+									<div class="swiper-wrapper"></div>
 								</div>
 							</div>
 						</div>
@@ -186,11 +180,13 @@
 														type="text"
 														id="fullName"
 														name="fullName"
+														autocomplete="off"
 														required />
 													<label for="fullName"
 														>full name</label
 													>
-													<div class="error-message">
+													<div
+														class="error-message name-error">
 														<p>Name is required.</p>
 													</div>
 												</div>
@@ -199,11 +195,13 @@
 														type="text"
 														id="email"
 														name="email"
+														autocomplete="off"
 														required />
 													<label for="email"
 														>email address</label
 													>
-													<div class="error-message">
+													<div
+														class="error-message email-error">
 														<p>
 															Email is required.
 														</p>
@@ -214,11 +212,13 @@
 														type="text"
 														id="subject"
 														name="subject"
+														autocomplete="off"
 														required />
 													<label for="subject"
 														>subject</label
 													>
-													<div class="error-message">
+													<div
+														class="error-message subject-error">
 														<p>
 															Subject is required.
 														</p>
@@ -231,6 +231,7 @@
 													<textarea
 														name="message"
 														id="message"
+														autocomplete="off"
 														required
 														rows="9"></textarea>
 													<label
@@ -238,7 +239,8 @@
 														class="message-label"
 														>message</label
 													>
-													<div class="error-message">
+													<div
+														class="error-message message-error">
 														<p>
 															Message is required.
 														</p>
@@ -271,7 +273,7 @@
 	<script type="module" src="./../js/contact.js"></script>
 	<script type="module" src="./../js/about.js"></script>
 	<script type="module" src="./../js/sidebar.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+
 	<script
 		type="module"
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

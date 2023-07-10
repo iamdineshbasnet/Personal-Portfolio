@@ -1,6 +1,6 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 const about_me =
-	'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quo beatae unde quidem quae atque quod soluta natus, voluptatibus rem iste non consequatur commodi vero accusamus ea in nesciunt ipsa.';
+	'I am a passionate Frontend Developer who specializes in JavaScript and Reactjs. I have a strong dedication to building interactive and user-friendly web applications. I constantly update my skills to stay connect with industry trends and best practices.';
 
 const details = [
 	{ id: 1, key: 'age', value: '19', type: 'text' },
@@ -14,17 +14,11 @@ const information = [
 	{
 		id: 1,
 		icon: 'desktop-outline',
-		title: 'web design',
+		title: 'web Development',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. ficia quaerat odit quos molestias vel voluptatem fugit magni dicta rspiciatis deleniti.',
+			'Web development refers to the process of creating and building websites or web applications that are accessible through the internet. It involves a combination of designing, coding, and programming to bring a website to life and make it functional for users.',
 	},
-	{
-		id: 1,
-		icon: 'desktop-outline',
-		title: 'web design',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. ficia quaerat odit quos molestias vel voluptatem fugit magni dicta rspiciatis deleniti.',
-	},
+	
 ];
 
 const testimonials = [
@@ -47,7 +41,7 @@ const testimonials = [
 		name: 'Monte Luke',
 		subtitle: 'Photographer',
 		photo: 'https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/9.JPG',
-		text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,',
+		text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,',
 	},
 	{
 		id: 4,
@@ -161,13 +155,12 @@ $(document).ready(function () {
 			speed: 1000,
 			spaceBetween: 30,
 			breakpoints: {
-				
 				768: {
 					slidesPerView: 2,
 				},
 				300: {
 					slidesPerView: 1,
-				}
+				},
 			},
 		}
 	);
