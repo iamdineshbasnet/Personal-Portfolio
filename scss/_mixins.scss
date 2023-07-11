@@ -66,6 +66,20 @@
 		margin: 2rem 0;
 		h4 {
 			font-size: 2rem;
+			position: relative;
+		width: max-content;
+			&::after{
+				content: '';
+				@include position(absolute, null, 0, null, 0, 40%, 0%);
+				opacity: .45;
+				height: 20px;
+				width: 30px;
+				background-image: -webkit-repeating-radial-gradient(center center,$primary-color,$primary-color 1px,transparent 0px,transparent 100%);
+				background-size: 6px 6px;
+				z-index: 0;
+		
+		
+			}
 		}
 	}
 	h4 {
@@ -74,8 +88,22 @@
 		font-size: 3rem;
 		font-weight: 600;
 		text-transform: capitalize;
+		position: relative;
+		width: max-content;
 		.highlights {
 			color: $primary-color;
+		}
+		&::after{
+			content: '';
+			@include position(absolute, null, 0, null, 0, 40%, 0%);
+			opacity: .45;
+			height: 30px;
+			width: 50px;
+			background-image: -webkit-repeating-radial-gradient(center center,$primary-color,$primary-color 1px,transparent 0px,transparent 100%);
+			background-size: 6px 6px;
+			z-index: 0;
+	
+	
 		}
 	}
 }

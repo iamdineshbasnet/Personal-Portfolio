@@ -18,6 +18,13 @@ const information = [
 		description:
 			'Web development refers to the process of creating and building websites or web applications that are accessible through the internet. It involves a combination of designing, coding, and programming to bring a website to life and make it functional for users.',
 	},
+	{
+		id: 2,
+		icon: 'search-outline',
+		title: 'SEO',
+		description:
+			'SEO, or Search Engine Optimization, is the process of optimizing a website to improve its visibility and rankings in search engine results. It involves strategies like keyword research, content optimization, and link building to attract organic traffic and drive business growth.',
+	},
 	
 ];
 

@@ -3,6 +3,10 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
 const text = ['Frontend Developer', 'Web Developer']
 
 $(document).ready(function () {
+	
+	if(!window.location.hash){
+		window.location.href ='/index.html#home'
+	}
 
 	text.forEach((txt)=>{
 		const swiper_slide = $(`<h4 class="swiper-slide"></h4>`).text(txt)

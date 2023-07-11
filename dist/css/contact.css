@@ -28,6 +28,22 @@
 }
 #contact .page-title.sm h4 {
   font-size: 2rem;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+#contact .page-title.sm h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 0%);
+  opacity: 0.45;
+  height: 20px;
+  width: 30px;
+  background-image: -webkit-repeating-radial-gradient(center center, #04B4E0, #04B4E0 1px, transparent 0px, transparent 100%);
+  background-size: 6px 6px;
+  z-index: 0;
 }
 #contact .page-title h4 {
   color: #eee;
@@ -35,9 +51,25 @@
   font-size: 3rem;
   font-weight: 600;
   text-transform: capitalize;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
 }
 #contact .page-title h4 .highlights {
   color: #04B4E0;
+}
+#contact .page-title h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 0%);
+  opacity: 0.45;
+  height: 30px;
+  width: 50px;
+  background-image: -webkit-repeating-radial-gradient(center center, #04B4E0, #04B4E0 1px, transparent 0px, transparent 100%);
+  background-size: 6px 6px;
+  z-index: 0;
 }
 #contact .contact-content {
   display: flex;
