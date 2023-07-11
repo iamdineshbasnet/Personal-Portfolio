@@ -28,10 +28,9 @@ const contact_list = [
 ];
 
 $(document).ready(function () {
+	const servicesId = 'service_7v16k58';
+	const templatesId = 'template_3a0hnyi';
 
-	const servicesId = "service_7v16k58"
-	const templatesId = "template_3a0hnyi"
-    
 	// map the contact list
 	contact_list.forEach(function (item) {
 		let contact_card = $('<div class="contact-card"></div>');
@@ -62,87 +61,86 @@ $(document).ready(function () {
 	$('#email').on('input', handleEmail);
 	$('#subject').on('input', handleSubject);
 	$('#message').on('input', handleMessage);
-	
+
 	//   handle full name
 	function handleFullName(e) {
-		var errorMessage = $('.name-error')
+		var errorMessage = $('.name-error');
 		if (e.target.value.trim().length < 1) {
-		  errorMessage.addClass('active');
-		} else if(!isValidFullName(e.target.value)){
-			errorMessage.text('Enter a valid name.').addClass('active')
-
+			errorMessage.addClass('active');
+		} else if (!isValidFullName(e.target.value)) {
+			errorMessage.text('Enter a valid name.').addClass('active');
 		} else {
-		  errorMessage.removeClass('active');
+			errorMessage.removeClass('active');
 		}
-	  }
+	}
 
-	  function isValidFullName(fullName) {
+	function isValidFullName(fullName) {
 		var fullNameRegex = /^[a-zA-Z\s'-]+$/;
 		return fullNameRegex.test(fullName);
-	  }
-	  
-	  // handle Email
-	  function handleEmail() {
+	}
+
+	// handle Email
+	function handleEmail() {
 		var emailInput = $(this);
 		var emailValue = emailInput.val().trim();
-		var errorMessage = $('.email-error')
-	  
+		var errorMessage = $('.email-error');
+
 		if (emailValue === '') {
-		  errorMessage.text('Email is required.').addClass('active');
+			errorMessage.text('Email is required.').addClass('active');
 		} else if (!isValidEmail(emailValue)) {
-		  errorMessage.text('Enter a valid email.').addClass('active');
+			errorMessage.text('Enter a valid email.').addClass('active');
 		} else {
-		  errorMessage.removeClass('active');
+			errorMessage.removeClass('active');
 		}
-	  }
-	  
-	  function isValidEmail(email) {
+	}
+
+	function isValidEmail(email) {
 		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
-	  }
-	  
+	}
+
 	//   handle subject
-	function handleSubject(e){
-		var errorMessage = $('.subject-error')
+	function handleSubject(e) {
+		var errorMessage = $('.subject-error');
 		if (e.target.value.trim().length < 1) {
-		  errorMessage.addClass('active');
+			errorMessage.addClass('active');
 		} else {
-		  errorMessage.removeClass('active');
+			errorMessage.removeClass('active');
 		}
 	}
 	//   handle message
-	function handleMessage(e){
-		var errorMessage = $('.message-error')
+	function handleMessage(e) {
+		var errorMessage = $('.message-error');
 		if (e.target.value.trim().length < 1) {
-		  errorMessage.addClass('active');
+			errorMessage.addClass('active');
 		} else {
-		  errorMessage.removeClass('active');
+			errorMessage.removeClass('active');
 		}
-	}	
+	}
 
-	
-	
-	$('form').submit(function(e){
-		e.preventDefault()
-	
+	$('form').submit(function (e) {
+		e.preventDefault();
+		let response = grecaptcha.getResponse();
 		const data = {
 			to_name: 'Dinesh',
-		   from_name: $('#fullName').val(),
-		   email_id: $('#email').val(),
-		   subject: $('#subject').val(),
-		   message: $('#message').val(),
-		 };
-		 if(isValidEmail(data.email_id)){
-			 emailjs.send(servicesId, templatesId, data)
-			  .then((res)=>{
-				 alert('message sent successfully')
-				
-			  })
-			  .catch((error)=>{
-				 console.log(error, 'error')
-			  })
+			from_name: $('#fullName').val(),
+			email_id: $('#email').val(),
+			subject: $('#subject').val(),
+			message: $('#message').val(),
+		};
+		if(!response){
+			$('.recaptcha-error').addClass('active')
 
-		 }
-	})
-
+		}else if (isValidEmail(data.email_id) && response) {
+			emailjs
+				.send(servicesId, templatesId, data)
+				.then((res) => {
+					alert('message sent successfully');
+				})
+				.catch((error) => {
+					console.log(error, 'error');
+				});
+			$('.recaptcha-error').removeClass('active')
+		} 
+	});
 });

@@ -1,8 +1,8 @@
 @import './mixins';
 @import './variables';
 
-#resume{
-    padding: 6rem;
+#resume {
+	padding: 6rem;
 	overflow: scroll;
 	height: 100vh;
 	&::-webkit-scrollbar {
@@ -18,48 +18,138 @@
 		@include pageTitle();
 	}
 
-    .resume-row{
-        .resume-progress{
-            .skills-wrapper{
-                .skills-content-wrapper{
-
-                    .skills-content{
-                        &:not(:last-child){
-                            margin-bottom: 1.4rem;
-                        }
-                        .top-content{
-                            @include flex(center, space-between, row, null);
-                            margin-bottom: .3rem;
-                            .skills-name{
-                                font-family: Poppins, Arial, Helvetica, sans-serif;
-                                color: #eee;
-                                font-size: 1.3rem;
-                                font-weight: 500;
-                                
-                            }
-                            .skills-value{
-                                font-family: Poppins, Arial, Helvetica, sans-serif;
-                                font-size: 1.3rem;
-                                color: #aaa;
-                            }
-                        }
-    
-                        .bottom-content{
-                            border: .1rem solid $primary-color;
-                            width: 100%;
-                            height: 1rem;
-                            border-radius: 10rem;
-                            padding: .2rem;
-                            .skills-progress-bar{
-                                // width: 0%;
-                                height: 100%;
-                                border-radius: 10rem;
-                                background: $primary-color;
-                            }
-                        }
-                    }
-                }
-            }
+	.resume-row {
+		display: grid;
+		grid-template-columns: 1.5fr 0.9fr;
+        @include sm{
+            grid-template-columns: repeat(1, 1fr)
         }
-    }
+		.resume-timeline {
+			.experience-wrapper {
+                margin-bottom: 4rem;
+				.experience-timeline-wrapper {
+					.experience-timeline {
+						@include flex(flex-start, flex-start, row, 1rem);
+                        &:not(:last-child){
+                            margin-bottom: 4rem;
+                        }
+						.experience-timeline-left {
+							width: max-content;
+							max-width: 30rem;
+							h4 {
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								font-size: 1.5rem;
+								font-weight: 600;
+								color: #aaa;
+								text-align: right;
+							}
+							p {
+								color: #a5a6a7;
+								text-align: right;
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								font-size: 1.4rem;
+							}
+						}
+						.experience-timeline-center {
+                            position: relative;
+							.circle {
+								background: $primary-color;
+								width: 0.8rem;
+								height: 0.8rem;
+								border-radius: 50%;
+                                position: relative;
+								
+							}
+                            .line{
+                                @include position(absolute, 100%, null, 50%, null, -50%, 0);
+                                width: .1rem;
+                                height: 25rem;
+                                background: #444;
+                            }
+						}
+						.experience-timeline-right {
+							max-width: 20rem;
+							h4 {
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								font-size: 1.5rem;
+								font-weight: 600;
+								color: #eee;
+								text-align: left;
+							}
+							p {
+								color: #aaa;
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								text-align: left;
+								font-size: 1.4rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.resume-progress {
+			.skills-wrapper {
+				.skills-content-wrapper {
+					.skills-content {
+						&:not(:last-child) {
+							margin-bottom: 1.4rem;
+						}
+                        margin-bottom: 4rem;
+						.top-content {
+							@include flex(center, space-between, row, null);
+							margin-bottom: 0.3rem;
+							.skills-name {
+								font-family: Poppins, Arial, Helvetica,
+									sans-serif;
+								color: #eee;
+								font-size: 1.3rem;
+								font-weight: 500;
+							}
+							.skills-value {
+                                font-family: Poppins, Arial, Helvetica,
+                                sans-serif;
+								font-size: 1.3rem;
+								color: #aaa;
+							}
+						}
+
+						.bottom-content {
+							border: 0.1rem solid $primary-color;
+							width: 100%;
+							height: 1rem;
+							border-radius: 10rem;
+							padding: 0.2rem;
+							.skills-progress-bar {
+								// width: 0%;
+								height: 100%;
+								border-radius: 10rem;
+								background: $primary-color;
+							}
+						}
+					}
+				}
+				.knowledges-content-wrapper {
+					@include flex(center, flex-start, row, 0.5rem);
+					flex-wrap: wrap;
+					.knowledge-button {
+						background: $primary-color;
+						width: max-content;
+						border-radius: 0.4rem;
+
+						p {
+							padding: 0.2rem 1rem;
+							color: #fff;
+							font-family: Poppins, Arial, Helvetica, sans-serif;
+							font-size: 1.3rem;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+	}
 }

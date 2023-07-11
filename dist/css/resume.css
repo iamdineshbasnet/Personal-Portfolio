@@ -73,6 +73,84 @@
   background-size: 6px 6px;
   z-index: -1;
 }
+#resume .resume-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+}
+@media (max-width: 768px) {
+  #resume .resume-row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#resume .resume-row .resume-timeline .experience-wrapper {
+  margin-bottom: 4rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline:not(:last-child) {
+  margin-bottom: 4rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-left {
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 30rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-left h4 {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #aaa;
+  text-align: right;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-left p {
+  color: #a5a6a7;
+  text-align: right;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-center {
+  position: relative;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-center .circle {
+  background: #04B4E0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  position: relative;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-center .line {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0.1rem;
+  height: 25rem;
+  background: #444;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-right {
+  max-width: 20rem;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-right h4 {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #eee;
+  text-align: left;
+}
+#resume .resume-row .resume-timeline .experience-wrapper .experience-timeline-wrapper .experience-timeline .experience-timeline-right p {
+  color: #aaa;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 1.4rem;
+}
+#resume .resume-row .resume-progress .skills-wrapper .skills-content-wrapper .skills-content {
+  margin-bottom: 4rem;
+}
 #resume .resume-row .resume-progress .skills-wrapper .skills-content-wrapper .skills-content:not(:last-child) {
   margin-bottom: 1.4rem;
 }
@@ -105,4 +183,25 @@
   height: 100%;
   border-radius: 10rem;
   background: #04B4E0;
+}
+#resume .resume-row .resume-progress .skills-wrapper .knowledges-content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#resume .resume-row .resume-progress .skills-wrapper .knowledges-content-wrapper .knowledge-button {
+  background: #04B4E0;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.4rem;
+}
+#resume .resume-row .resume-progress .skills-wrapper .knowledges-content-wrapper .knowledge-button p {
+  padding: 0.2rem 1rem;
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
 }/*# sourceMappingURL=resume.css.map */
