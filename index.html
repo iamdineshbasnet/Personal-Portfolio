@@ -280,7 +280,7 @@
 										</div>
 
 										<div class="button-group">
-											<button type="submit">
+											<button  type="submit">
 												<a>send message</a>
 											</button>
 										</div>
@@ -305,6 +305,13 @@
 	<script type="module" src="./js/resume.js"></script>
 	<script type="module" src="./js/sidebar.js"></script>
 
+	<!-- Email js integration -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('8t2fpHwI7dEa9RDlk');
+        })();
+    </script>
 	<script
 		type="module"
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

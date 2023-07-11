@@ -29,6 +29,8 @@ const contact_list = [
 
 $(document).ready(function () {
 
+	const servicesId = "service_7v16k58"
+	const templatesId = "template_3a0hnyi"
     
 	// map the contact list
 	contact_list.forEach(function (item) {
@@ -117,4 +119,30 @@ $(document).ready(function () {
 		  errorMessage.removeClass('active');
 		}
 	}	
+
+	
+	
+	$('form').submit(function(e){
+		e.preventDefault()
+	
+		const data = {
+			to_name: 'Dinesh',
+		   from_name: $('#fullName').val(),
+		   email_id: $('#email').val(),
+		   subject: $('#subject').val(),
+		   message: $('#message').val(),
+		 };
+		 if(isValidEmail(data.email_id)){
+			 emailjs.send(servicesId, templatesId, data)
+			  .then((res)=>{
+				 alert('message sent successfully')
+				
+			  })
+			  .catch((error)=>{
+				 console.log(error, 'error')
+			  })
+
+		 }
+	})
+
 });
