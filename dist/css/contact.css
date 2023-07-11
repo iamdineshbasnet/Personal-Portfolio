@@ -31,6 +31,7 @@
   position: relative;
   width: -moz-max-content;
   width: max-content;
+  z-index: 1;
 }
 #contact .page-title.sm h4::after {
   content: "";
@@ -43,7 +44,7 @@
   width: 30px;
   background-image: -webkit-repeating-radial-gradient(center center, #04B4E0, #04B4E0 1px, transparent 0px, transparent 100%);
   background-size: 6px 6px;
-  z-index: 0;
+  z-index: -1;
 }
 #contact .page-title h4 {
   color: #eee;
@@ -54,6 +55,7 @@
   position: relative;
   width: -moz-max-content;
   width: max-content;
+  z-index: 1;
 }
 #contact .page-title h4 .highlights {
   color: #04B4E0;
@@ -69,7 +71,7 @@
   width: 50px;
   background-image: -webkit-repeating-radial-gradient(center center, #04B4E0, #04B4E0 1px, transparent 0px, transparent 100%);
   background-size: 6px 6px;
-  z-index: 0;
+  z-index: -1;
 }
 #contact .contact-content {
   display: flex;

@@ -1,6 +1,7 @@
 const menu_list = [
 	{ id: 1, name: 'home', url: 'home', icon: 'home-outline' },
 	{ id: 2, name: 'about me', url: 'about-me', icon: 'person-outline' },
+	{ id: 2, name: 'resume', url: 'resume', icon: 'school-outline' },
 	{ id: 3, name: 'portfolio', url: 'portfolio', icon: 'briefcase-outline' },
 	{ id: 4, name: 'contact', url: 'contact', icon: 'mail-outline' },
 ];
