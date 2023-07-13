@@ -2,7 +2,7 @@
 This portfolio showcases my skills, projeccts and experience
 
 ## Demo
-Checkout the [demo](https://personal-portfolio-q70lt5717-iamdineshbasnet.vercel.app/index.html#home) of an app
+Checkout the [demo](https://personal-portfolio-poidfeklg-iamdineshbasnet.vercel.app/) of an app
 
 ## Features
 - About Me: A section that provides an overview of myself.
