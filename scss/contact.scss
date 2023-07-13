@@ -60,13 +60,19 @@
 				form {
 					.input-group {
 						@include flex(flex-start, space-between, row, 2rem);
-						@include xxs {
-							flex-direction: column;
-							margin-top: 3rem;
+						@include xs {
+							@include flex(flex-start, flex-start, column, null);
+
 						}
 						.input-group-wrapper {
 							width: 100%;
+						&.recaptcha-mobile{
+							@include xs{
+								display: block;
+								margin-top: 2rem;
 
+							}
+						}
 							.input-group {
 								@include flex(
 									flex-start,
@@ -77,6 +83,11 @@
 								position: relative;
 								&:not(:last-child) {
 									margin-bottom: 4rem;
+								}
+								.recaptcha-desktop{
+									@include xs{
+										display: none;
+									}
 								}
 								label {
 									font-size: 1.4rem;
@@ -155,6 +166,7 @@
 								input {
 									height: 4rem;
 								}
+								
 								.error-message {
 									// display: none;
 									display: none;
@@ -200,7 +212,7 @@
 					}
 					
 					.button-group {
-						margin-top: 4rem;
+						margin-top: 3rem;
 						button {
 							background: transparent;
 							border: 0.2rem solid $primary-color;
