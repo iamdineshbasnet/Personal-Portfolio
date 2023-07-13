@@ -128,19 +128,30 @@ $(document).ready(function () {
 			subject: $('#subject').val(),
 			message: $('#message').val(),
 		};
-		if(!response){
-			$('.recaptcha-error').addClass('active')
-
-		}else if (isValidEmail(data.email_id) && response) {
+		if (!response) {
+			$('.recaptcha-error').addClass('active');
+		} else if (isValidEmail(data.email_id) && response) {
 			emailjs
 				.send(servicesId, templatesId, data)
 				.then((res) => {
-					alert('message sent successfully');
+					$('.app-toast').addClass('active');
+					// Clear input values
+					$('#fullName').val('');
+					$('#email').val('');
+					$('#subject').val('');
+					$('#message').val('');
+
+					// close the app toast after 4s
+					if ($('.app-toast').hasClass('active')) {
+						setTimeout(function () {
+							$('.app-toast').removeClass('active');
+						}, 4000);
+					}
 				})
 				.catch((error) => {
 					console.log(error, 'error');
 				});
-			$('.recaptcha-error').removeClass('active')
-		} 
+			$('.recaptcha-error').removeClass('active');
+		}
 	});
 });

@@ -58,22 +58,21 @@
 			width: 100%;
 			.contact-form {
 				form {
-					.input-group {
+					.input-field {
 						@include flex(flex-start, space-between, row, 2rem);
 						@include xs {
 							@include flex(flex-start, flex-start, column, null);
-
 						}
 						.input-group-wrapper {
 							width: 100%;
-						&.recaptcha-mobile{
-							display: none;
-							@include xs{
-								display: block;
-								margin-top: 2rem;
-
+							&.recaptcha-mobile {
+								display: none;
+								@include xs {
+									display: block;
+									margin-top: 2rem;
+								}
 							}
-						}
+							
 							.input-group {
 								@include flex(
 									flex-start,
@@ -85,8 +84,9 @@
 								&:not(:last-child) {
 									margin-bottom: 4rem;
 								}
-								.recaptcha-desktop{
-									@include xs{
+								&.recaptcha-desktop {
+									display: block;
+									@include xs {
 										display: none;
 									}
 								}
@@ -167,7 +167,7 @@
 								input {
 									height: 4rem;
 								}
-								
+
 								.error-message {
 									// display: none;
 									display: none;
@@ -211,7 +211,7 @@
 							}
 						}
 					}
-					
+
 					.button-group {
 						margin-top: 3rem;
 						button {

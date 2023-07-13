@@ -120,7 +120,7 @@
 #contact .contact-content .right {
   width: 100%;
 }
-#contact .contact-content .right .contact-form form .input-group {
+#contact .contact-content .right .contact-form form .input-field {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -128,26 +128,26 @@
   gap: 2rem;
 }
 @media (max-width: 500px) {
-  #contact .contact-content .right .contact-form form .input-group {
+  #contact .contact-content .right .contact-form form .input-field {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
   }
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper {
   width: 100%;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper.recaptcha-mobile {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper.recaptcha-mobile {
   display: none;
 }
 @media (max-width: 500px) {
-  #contact .contact-content .right .contact-form form .input-group .input-group-wrapper.recaptcha-mobile {
+  #contact .contact-content .right .contact-form form .input-field .input-group-wrapper.recaptcha-mobile {
     display: block;
     margin-top: 2rem;
   }
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -155,15 +155,18 @@
   gap: 0.5rem;
   position: relative;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group:not(:last-child) {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group:not(:last-child) {
   margin-bottom: 4rem;
 }
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group.recaptcha-desktop {
+  display: block;
+}
 @media (max-width: 500px) {
-  #contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .recaptcha-desktop {
+  #contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group.recaptcha-desktop {
     display: none;
   }
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group label {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group label {
   font-size: 1.4rem;
   color: #a5a6a7;
   text-transform: capitalize;
@@ -175,30 +178,30 @@
   transform: translate(0, -50%);
   transition: all 0.3s;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group label.message-label {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group label.message-label {
   position: absolute;
   top: 2rem;
   left: 1rem;
   transform: translate(, );
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:focus ~ label,
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:focus ~ label {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group input:focus ~ label,
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group textarea:focus ~ label {
   color: #04B4E0;
   position: absolute;
   top: 0%;
   left: 0rem;
   transform: translate(0, -100%);
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:valid ~ label,
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:valid ~ label {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group input:valid ~ label,
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group textarea:valid ~ label {
   color: #04B4E0;
   position: absolute;
   top: 0%;
   left: 0rem;
   transform: translate(0, -100%);
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input,
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group input,
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group textarea {
   resize: none;
   width: 100%;
   background: transparent;
@@ -209,15 +212,15 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input:focus,
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group textarea:focus {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group input:focus,
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group textarea:focus {
   border: 0.2rem solid #04B4E0;
   outline: none;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group input {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group input {
   height: 4rem;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group .error-message {
   display: none;
   position: absolute;
   bottom: -0.5rem;
@@ -231,10 +234,10 @@
   font-size: 1.3rem;
   font-weight: 400;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message.active {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group .error-message.active {
   display: block;
 }
-#contact .contact-content .right .contact-form form .input-group .input-group-wrapper .input-group .error-message::before {
+#contact .contact-content .right .contact-form form .input-field .input-group-wrapper .input-group .error-message::before {
   content: "";
   position: absolute;
   top: 0;

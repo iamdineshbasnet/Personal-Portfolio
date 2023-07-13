@@ -21,6 +21,13 @@
 	</head>
 	<body>
 		<div id="page">
+			<div class="app-toast">
+				<div class="toast">
+
+					<ion-icon class="toast-icon" name="checkmark-circle-outline"></ion-icon>
+					<p>message sent successfully!</p>
+				</div>
+			</div>
 			<!-- main menu -->
 			<div class="main-menu">
 				<ul class="menu"></ul>
@@ -263,7 +270,7 @@
 
 								<div class="contact-form">
 									<form action="#">
-										<div class="input-group">
+										<div class="input-field">
 											<div class="input-group-wrapper">
 												<div class="input-group">
 													<input
@@ -314,21 +321,22 @@
 														</p>
 													</div>
 												</div>
-												<div class="input-group">
+												<div class="input-group recaptcha-desktop">
 													<div
-														class="g-recaptcha recaptcha-desktop"
+														class="g-recaptcha "
 														data-sitekey="6LcoxBUnAAAAALOxmnavWoi6RPaoVTMPmaYGT4p1"></div>
 													<div
 														class="error-message recaptcha-error">
 														<p>
 															Recaptcha is
-															required. 
+															required.
 														</p>
 													</div>
 												</div>
 											</div>
 
-											<div class="input-group-wrapper textarea-wrapper">
+											<div
+												class="input-group-wrapper textarea-wrapper">
 												<div class="input-group">
 													<textarea
 														name="message"
@@ -350,7 +358,8 @@
 												</div>
 											</div>
 
-											<div class="input-group-wrapper recaptcha-mobile">
+											<div
+												class="input-group-wrapper recaptcha-mobile">
 												<div class="input-group">
 													<div
 														class="g-recaptcha"
