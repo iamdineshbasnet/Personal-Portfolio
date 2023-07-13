@@ -138,6 +138,9 @@
 #contact .contact-content .right .contact-form form .input-group .input-group-wrapper {
   width: 100%;
 }
+#contact .contact-content .right .contact-form form .input-group .input-group-wrapper.recaptcha-mobile {
+  display: none;
+}
 @media (max-width: 500px) {
   #contact .contact-content .right .contact-form form .input-group .input-group-wrapper.recaptcha-mobile {
     display: block;

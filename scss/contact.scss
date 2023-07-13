@@ -67,6 +67,7 @@
 						.input-group-wrapper {
 							width: 100%;
 						&.recaptcha-mobile{
+							display: none;
 							@include xs{
 								display: block;
 								margin-top: 2rem;
