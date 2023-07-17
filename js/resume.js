@@ -1,7 +1,7 @@
 const coding_skills = [
-	{ id: 1, name: 'HTML/CSS', value: '80' },
-	{ id: 4, name: 'jQuery', value: '70' },
+	{ id: 1, name: 'HTML/CSS', value: '90' },
 	{ id: 2, name: 'Javascript', value: '75' },
+	{ id: 4, name: 'jQuery', value: '80' },
 	{ id: 3, name: 'Reactjs', value: '85' },
 ];
 
@@ -9,6 +9,7 @@ const knowledges = [
 	'HTML',
 	'CSS',
 	'Javascript',
+	'Typescript',
 	'Reactjs',
 	'Nextjs',
 	'Redux',

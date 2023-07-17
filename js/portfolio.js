@@ -1,24 +1,14 @@
 const projects = [
 	{
-		id: 1,
 		thumbnail:
-			'../../assets/movieapp.png',
-		title: 'Movie App',
-		demo: 'https://themoviedb-rust.vercel.app/',
-		sourceCode: 'https://github.com/iamdineshbasnet/Movie-App',
-		category: 'reactjs',
+			'../../assets/Registration-form.png',
+		title: 'Registration Form',
+		demo: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
+		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
+		category: 'css',
 	},
 	{
-		id: 2,
-		thumbnail:
-			'../../assets/DashUI.png',
-		title: 'DashUI',
-		demo: 'https://dashboard-swart-one-62.vercel.app/',
-		sourceCode: 'https://github.com/iamdineshbasnet/DashUI',
-		category: 'reactjs',
-	},
-	{
-		id: 3,
+
 		thumbnail:
 			'../../assets/gallary-hover.png',
 		title: 'Gallary with zoom effect',
@@ -27,23 +17,46 @@ const projects = [
 		category: 'javascript',
 	},
 	{
-		id: 4,
 		thumbnail:
-			'../../assets/calculator.png',
+			'../../assets/movieapp.png',
+		title: 'Movie App',
+		demo: 'https://themoviedb-rust.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/Movie-App',
+		category: 'reactjs',
+	},
+	{
+		thumbnail:
+			'../../assets/DashUI.png',
+		title: 'DashUI',
+		demo: 'https://dashboard-swart-one-62.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/DashUI',
+		category: 'reactjs',
+	},
+	{
+		thumbnail:
+			'../../assets/calculator-app.png',
 		title: 'Calculator',
-		demo: 'https://codepen.io/iamdineshbasnet/pen/WNgggKP',
-		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/WNgggKP',
+		demo: 'https://calculator-jade-psi.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
 		category: 'javascript',
 	},
 	{
-		id: 4,
 		thumbnail:
-			'../../assets/Registration-form.png',
-		title: 'Registration Form',
-		demo: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
-		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
-		category: 'css',
+			'../../assets/Todo.png',
+		title: 'Todo App',
+		demo: 'https://todos-app-with-js.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/Todos-App-With-JS',
+		category: 'javascript',
 	},
+	{
+		thumbnail:
+			'../../assets/Analog-Clock.png',
+		title: 'Analog Clock',
+		demo: 'https://analog-clock-nine-virid.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
+		category: 'javascript',
+	},
+
 	
 ];
 
