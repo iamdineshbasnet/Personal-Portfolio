@@ -141,6 +141,9 @@ $(document).ready(function () {
 					$('#subject').val('');
 					$('#message').val('');
 
+					// Reset reCAPTCHA
+					grecaptcha.reset();
+					
 					// close the app toast after 4s
 					if ($('.app-toast').hasClass('active')) {
 						setTimeout(function () {

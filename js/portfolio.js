@@ -18,6 +18,14 @@ const projects = [
 	},
 	{
 		thumbnail:
+			'../../assets/panipuri.png',
+		title: 'Pani Puri Game',
+		demo: 'https://pani-puri-game.vercel.app/',
+		sourceCode: 'https://github.com/iamdineshbasnet/Pani-Puri-Game',
+		category: 'game',
+	},
+	{
+		thumbnail:
 			'../../assets/movieapp.png',
 		title: 'Movie App',
 		demo: 'https://themoviedb-rust.vercel.app/',

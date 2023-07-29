@@ -1,8 +1,8 @@
 # Personal Portfolio
 This portfolio showcases my skills, projeccts and experience
 
-## Demo
-Checkout the [demo](https://personal-portfolio-poidfeklg-iamdineshbasnet.vercel.app/) of an app
+## Live
+Checkout the [Live](https://dinesh-basnet.com.np/) of an app
 
 ## Features
 - About Me: A section that provides an overview of myself.
