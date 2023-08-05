@@ -25,7 +25,6 @@ const information = [
 		description:
 			'SEO, or Search Engine Optimization, is the process of optimizing a website to improve its visibility and rankings in search engine results. It involves strategies like keyword research, content optimization, and link building to attract organic traffic and drive business growth.',
 	},
-	
 ];
 
 const testimonials = [
@@ -43,20 +42,7 @@ const testimonials = [
 		photo: 'https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/9.JPG',
 		text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,',
 	},
-	{
-		id: 3,
-		name: 'Monte Luke',
-		subtitle: 'Photographer',
-		photo: 'https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/9.JPG',
-		text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,',
-	},
-	{
-		id: 4,
-		name: 'Monte Luke',
-		subtitle: 'Photographer',
-		photo: 'https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/9.JPG',
-		text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Similique natus debitis inventore,',
-	},
+	
 ];
 
 $(document).ready(function () {

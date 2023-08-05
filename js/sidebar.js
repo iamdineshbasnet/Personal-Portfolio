@@ -42,9 +42,11 @@ $(document).ready(function () {
 
 	// Check window.location.hash and activate corresponding menu item and page
 	const hash = window.location.hash;
+	console.log(hash, 'hash')
 	if (hash) {
 		$('.main-menu .menu .item a').each(function () {
 			const href = $(this).attr('href');
+			console.log(href, 'herf')
 			if (href === hash) {
 				const menuItem = $(this).parent();
 				const page = $(hash);
@@ -93,4 +95,8 @@ $(document).ready(function () {
 		$('header').toggleClass('active');
 		$('.toggle-menu .menu-icon-wrapper .bar').toggleClass('close');
 	});
+
+	// get year
+	const currentYear = new Date().getFullYear()
+	$('.year-text').text(currentYear)
 });
