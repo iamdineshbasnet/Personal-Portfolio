@@ -6,39 +6,44 @@ const projects = [
 		demo: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
 		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/xxaaVea',
 		category: 'css',
+		isActive: false,
 	},
 	{
 
 		thumbnail:
-			'../../assets/gallary-hover.png',
+		'../../assets/gallary-hover.png',
 		title: 'Gallary with zoom effect',
 		demo: 'https://codepen.io/iamdineshbasnet/pen/ZEqJNqq',
 		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/ZEqJNqq',
 		category: 'javascript',
+		isActive: false,
 	},
 	{
 		thumbnail:
 			'../../assets/panipuri.png',
-		title: 'Pani Puri Game',
+			title: 'Pani Puri Game',
 		demo: 'https://pani-puri-game.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/Pani-Puri-Game',
 		category: 'game',
+		isActive: false,
 	},
 	{
 		thumbnail:
-			'../../assets/movieapp.png',
+		'../../assets/movieapp.png',
 		title: 'Movie App',
 		demo: 'https://themoviedb-rust.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/Movie-App',
 		category: 'reactjs',
+		isActive: true,
 	},
 	{
 		thumbnail:
-			'../../assets/DashUI.png',
+		'../../assets/DashUI.png',
 		title: 'DashUI',
 		demo: 'https://dashboard-swart-one-62.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/DashUI',
 		category: 'reactjs',
+		isActive: true,
 	},
 	{
 		thumbnail:
@@ -47,6 +52,7 @@ const projects = [
 		demo: 'https://calculator-jade-psi.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
 		category: 'javascript',
+		isActive: false,
 	},
 	{
 		thumbnail:
@@ -55,14 +61,16 @@ const projects = [
 		demo: 'https://todos-app-with-js.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/Todos-App-With-JS',
 		category: 'javascript',
+		isActive: true,
 	},
 	{
 		thumbnail:
 			'../../assets/Analog-Clock.png',
-		title: 'Analog Clock',
-		demo: 'https://analog-clock-nine-virid.vercel.app/',
-		sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
-		category: 'javascript',
+			title: 'Analog Clock',
+			demo: 'https://analog-clock-nine-virid.vercel.app/',
+			sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
+			category: 'javascript',
+			isActive: false,
 	},
 
 	
@@ -74,7 +82,7 @@ $(document).ready(function () {
 
 	// filter the list from projects based on category
 	projects?.forEach((project) => {
-		if (!filter_groups.includes(project.category)) {
+		if (!filter_groups.includes(project.category) && project.isActive) {
 			filter_groups.push(project.category);
 		}
 	});
@@ -117,8 +125,8 @@ $(document).ready(function () {
 		// map project details in card
 		projects.forEach(function (project) {
 			if (
-				activeItem.toLowerCase() === 'all' ||
-				project.category === activeItem
+				(activeItem.toLowerCase() === 'all' ||
+				project.category === activeItem) && (project.isActive)
 			) {
 				let card = $('<div class="card"></div>');
 				let imageWrapper = $(
