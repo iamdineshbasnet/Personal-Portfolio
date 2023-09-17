@@ -2,7 +2,7 @@
 This portfolio showcases my skills, projects and experience
 
 ## Live
-Checkout the [Live](https://dinesh-basnet.com.np/) of an app
+Checkout the [Live](https://iamdineshbasnet.vercel.app/) of an app
 
 ## Features
 - About Me: A section that provides an overview of myself.
