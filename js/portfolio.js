@@ -16,7 +16,7 @@ const projects = [
 		demo: 'https://codepen.io/iamdineshbasnet/pen/ZEqJNqq',
 		sourceCode: 'https://codepen.io/iamdineshbasnet/pen/ZEqJNqq',
 		category: 'javascript',
-		isActive: false,
+		isActive: true,
 	},
 	{
 		thumbnail:
@@ -25,7 +25,7 @@ const projects = [
 		demo: 'https://pani-puri-game.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/Pani-Puri-Game',
 		category: 'game',
-		isActive: false,
+		isActive: true,
 	},
 	{
 		thumbnail:
@@ -52,7 +52,7 @@ const projects = [
 		demo: 'https://calculator-jade-psi.vercel.app/',
 		sourceCode: 'https://github.com/iamdineshbasnet/HTML-CSS-JS',
 		category: 'javascript',
-		isActive: false,
+		isActive: true,
 	},
 	{
 		thumbnail:
